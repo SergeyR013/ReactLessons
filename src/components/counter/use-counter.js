@@ -1,21 +1,18 @@
 import { useState } from "react";
 
-const maxValue = 5;
-const minValue = 0;
-
-export const useCount = () => {
-    const [value, setValue] = useState(0);
+export const useCount = ({ max, min, v}) => {
+    const [value, setValue] = useState(v);
 
 
     const increment = () => {
-        if (value >= maxValue)
+        if (value >= max)
             return;
 
         setValue(value + 1);
     }
 
     const decrement = () => {
-        if (value <= minValue)
+        if (value <= min)
             return;
 
         setValue(value - 1);
