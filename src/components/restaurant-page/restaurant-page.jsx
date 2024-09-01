@@ -6,8 +6,8 @@ export const RestaurantPage = ({ title }) => {
         <div>
             <h1>{title}</h1>
 
-            {restaurants.map(({ name, menu, reviews }) => (
-                <Restaurant
+            {restaurants.map(({id, name, menu, reviews }) => (
+                <Restaurant key={id}
                     name={name}
                     menu={menu}
                     reviews={reviews}
